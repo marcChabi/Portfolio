@@ -1,0 +1,811 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Pirata+One&family=Sixtyfour+Convergence&display=swap');
+
+.cinzel-font {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+  }
+  .pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 900px;
+    font-style: normal;
+  }
+  
+.spicy-rice-regular {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.center-Thing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white; /* Texte en blanc pour contraster avec le fond */
+    font-family: Arial, sans-serif; /* Choix de la police */
+}
+
+/*exercice */
+.label-check {
+  display: none;
+}
+
+.hamburger-label {
+  width: 40px;
+  height: 30px;
+  display: none;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hamburger-label div {
+  width: 100%;
+  height: 4px;
+  background-color: #f5eded;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.line1 {
+  top: 0;
+}
+
+.line2 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line3 {
+  bottom: 0;
+}
+
+#label-check:checked + .hamburger-label .line1 {
+  transform: rotate(45deg) translateY(8px);
+}
+
+#label-check:checked + .hamburger-label .line2 {
+  opacity: 0;
+}
+
+#label-check:checked + .hamburger-label .line3 {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(196, 188, 188, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.modal a:hover {
+  background-color: #5c4040;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Hide hamburger on larger screens */
+@media (max-width: 768px) {
+  .hamburger-label {
+      display: block;
+  }
+
+  .navigation {
+      display: none;
+  }
+}
+
+
+
+/*Texte de présentation à propos*/
+
+.text-present {
+  font-family: 'Roboto', sans-serif; /* Une police moderne et lisible */
+  font-size: 1.0rem; /* Taille confortable pour la lecture */
+  color: #333; /* Couleur de texte subtile pour éviter un contraste trop fort */
+  line-height: 1.6; /* Espacement pour une meilleure lisibilité */
+  text-align: justify; /* Pour un alignement élégant */
+  background-color: #e4d9d9; /* Légère teinte de fond pour différencier le bloc de texte */
+  padding: 20px; /* Espacement interne pour un effet aéré */
+  border-left: 5px solid #6c63ff; /* Bordure colorée pour ajouter un effet visuel distinct */
+  border-radius: 8px; /* Coins légèrement arrondis pour adoucir le visuel */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner un effet de profondeur */
+  margin: 20px 0; /* Espacement externe pour aérer la mise en page */
+  max-width: 800px; /* Limiter la largeur pour une lecture plus agréable */
+}
+
+.text-present::before {
+  content: "✨ Présentation";
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6c63ff; /* Couleur d’accent correspondant à la bordure */
+  margin-bottom: 15px;
+}
+
+.text-present br {
+  margin-bottom: 15px; /* Ajoute de l'espacement entre les paragraphes */
+}
+
+
+/* Styles pour les sections de projets */
+.projects {
+    padding: 50px 0;
+    background: #8c5780;
+    background: -webkit-linear-gradient(0deg, #8c5780 0%, #0c2c34 100%);
+    background: linear-gradient(0deg, #8c5780 0%, #0c2c34 100%);
+    color: white; /* Texte en blanc pour contraster avec le fond */
+    font-family: Arial, sans-serif; /* Choix de la police */
+}
+
+
+.card-prs {
+    border: none; /* Retire la bordure par défaut des cartes */
+    background: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+}
+
+.card-prs-title {
+    color: #ff9a00; /* Couleur d'accent pour les titres des cartes */
+}
+
+/* Styles pour le pied de page */
+footer {
+    background: #8c5780;
+    background: linear-gradient(0deg, #8c5780 0%,  #0c2c34 100%);
+}
+
+
+/* Styles pour la photo */
+
+#photo-container {
+    position: relative; /* Positionnement relatif pour l'animation */
+    width: 360px; /* Largeur du cadre */
+    height: 385px; /* Hauteur du cadre */
+    border-radius: 50%; /* Pour un cadre circulaire */
+    overflow: hidden; /* Cache le débordement */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre pour le cadre */
+}
+
+#my-photo {
+    width: 100%; /* Prend toute la largeur du cadre */
+    height: 100%; /* Prend toute la hauteur du cadre */
+    object-fit: cover; /* Recadre l'image */
+    border-radius: 50%; /* Arrondi les coins de l'image */
+}
+
+#magic-animation {
+    position: absolute; /* Position absolue pour l'animation */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Pour un effet circulaire */
+    animation: spin 5s linear infinite; /* Animation de rotation */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); /* Ombre lumineuse */
+    opacity: 0.9; /* Légère transparence */
+}
+
+/* Animation de rotation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Styles pour contenaire des buttons*/
+
+.btn-container {
+    display: flex;
+   /* justify-content: center;  Centrer les boutons horizontalement */
+    gap: 20px; /* Espacement entre les boutons */
+}
+
+/* Styles pour le boutton pour télécharger mon cv*/
+
+.btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  }
+  
+  .btn:active {
+    scale: 0.92;
+  }
+  
+  .btn:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+  }
+
+  /* Styles pour les liens Github */
+  .btn-github {
+    display: grid;
+    place-items: center;
+    background: #e3edf7;
+    width: 60px; /* Assure-toi que la largeur et la hauteur soient égales */
+    height: 60px;
+    border-radius: 50%; /* Fait en sorte que le bouton soit circulaire */
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.btn-github:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translateY(0.5em);
+}
+
+.btn-github svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.5s;
+}
+
+.btn-github:hover svg {
+    transform: scale(0.9);
+    fill: #333333;
+}
+
+/* Styles pour les liens LinkedIn */
+.btn-linkedin {
+    display: grid;
+    place-items: center;
+    background: #e3edf7;
+    width: 60px; /* Assure que la largeur et la hauteur sont égales */
+    height: 60px;
+    border-radius: 10px; /* Angle arrondi pour un bouton carré */
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.btn-linkedin:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: translateY(0.5em);
+}
+
+.btn-linkedin svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.5s;
+    fill: #0077b5;
+}
+
+.btn-linkedin:hover svg {
+    transform: scale(0.9);
+    fill: #005582;
+}
+
+
+.nav-link {
+    text-decoration: none;       /* Retire le soulignement */
+    color: #e6d9d9;                 /* Couleur du texte */
+    font-weight: bold;           /* Texte en gras */
+    padding: 10px 15px;         /* Espacement autour du texte */
+    border-radius: 3px;         /* Coins arrondis des liens */
+    transition: background-color 0.3s ease; /* Animation lors du hover */
+}
+.nav-link:hover {
+    background-color: #e0e0e0;  /* Couleur de fond lors du hover */
+}
+
+/*Styles pour les compétences*/
+#competences {
+  background-color: #9e8989;
+  padding: 50px 0;
+  background: #8c5780;
+  background: linear-gradient(0deg, #0c2c34 0%, #8c5780 100%);
+  color: white; /* Texte en blanc pour contraster avec le fond */
+  font-family: Arial, sans-serif; /* Choix de la police */
+}
+
+
+.skills-container-2 {
+  position: relative;
+  width: 300px; /* Ajuste selon ton besoin */
+  height: 300px; /* Ajuste selon ton besoin */
+  margin: 0 auto;
+}
+.skills-container-2 div {
+  position: absolute;
+  top: 30%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%); /* Centre verticalement les éléments */
+}
+.skills-container {
+  position: relative;
+  width: 300px; /* Ajuste selon ton besoin */
+  height: 300px; /* Ajuste selon ton besoin */
+  margin: 0 auto;
+}
+.skills-container div {
+  position: absolute;
+  top: 30%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%); /* Centre verticalement les éléments */
+}
+
+/* Animation horizontale */
+@keyframes slide-horizontal {
+  0% {
+    left: 1000px; /* Les éléments commencent à droite, hors de vue */
+  }
+  100% {
+    left: -1000px; /* Les éléments glissent vers la gauche, hors de vue */
+  }
+}
+
+/* Animation horizontale 2 */
+@keyframes slide-horizontal-2 {
+  0% {
+    left: -1000px; /* Les éléments glissent vers la gauche, hors de vue */
+  }
+  100% {
+    left: 1000px; /* Les éléments commencent à droite, hors de vue */
+    
+  }
+}
+
+.skill-1, .skill-2, .skill-3, .skill-4, .skill-5, .skill-6, .skill-7, .skill-8, .skill-9, .skill-10{
+  animation: slide-horizontal 20s linear infinite; /* Augmente la durée de l'animation pour inclure tous les éléments */
+}
+
+.skill-2-1, .skill-2-2, .skill-2-3{
+  animation: slide-horizontal-2 20s linear infinite; /* Augmente la durée de l'animation pour inclure tous les éléments */
+}
+
+.skill-1 { animation-delay: 0s; }
+.skill-2 { animation-delay: -1.5s; }
+.skill-3 { animation-delay: -3s; }
+.skill-4 { animation-delay: -4.5s; }
+.skill-5 { animation-delay: -6s; }
+.skill-6 { animation-delay: -7.5s; }
+.skill-7 { animation-delay: -9s; }
+.skill-8 { animation-delay: -10.5s; }
+.skill-9 { animation-delay: -12s; }
+.skill-10 { animation-delay: -13.5s; }
+
+.skill-2-1 { animation-delay: 0s; }
+.skill-2-2 { animation-delay: -1.5s; }
+.skill-2-3 { animation-delay: -3s; }
+
+/* Animation pour l'effet de présentation  des projets */
+
+
+.card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.6);
+  }
+  
+  #btn {
+    position: absolute;
+    top: 690px;
+    left: 16px;
+    z-index: 99;
+  }
+  
+  .card-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba(255, 255, 255, 0.87);
+    padding-left: 16px;
+  }
+  
+  .content-place {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .content-title-1,
+  .content-title-2 {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .content-start {
+    width: 30px;
+    height: 5px;
+    border-radius: 99px;
+    background-color: rgba(255, 255, 255, 0.87);
+  }
+  
+  .details {
+    z-index: 22;
+    position: absolute;
+    top: 240px;
+    left: 60px;
+  }
+  
+  .place-box {
+    height: 46px;
+    overflow: hidden;
+  }
+  
+  .text {
+    padding-top: 16px;
+    font-size: 20px;
+    position: relative;
+  }
+  
+  .text::before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 4px;
+    border-radius: 99px;
+    background-color: white;
+  }
+  
+  .title-1,
+  .title-2 {
+    font-weight: 600;
+    font-size: 72px;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .title-box-1,
+  .title-box-2 {
+    margin-top: 2px;
+    height: 100px;
+    overflow: hidden;
+  }
+  
+  .desc {
+    margin-top: 16px;
+    width: 500px;
+  }
+  
+  .cta {
+    width: 500px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .discover {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    height: 36px;
+    border-radius: 99px;
+    color: #ffffff;
+    padding: 4px 24px;
+    font-size: 12px;
+    margin-left: 16px;
+    text-transform: uppercase;
+  }
+  
+  nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 36px;
+    font-weight: 500;
+    transition: top 0.3s;
+  }
+  
+  nav svg,
+  nav .svg-container {
+    width: 20px;
+    height: 20px;
+  }
+  
+  nav > div {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  nav > div:first-child {
+    gap: 10px;
+  }
+  
+  nav > div:last-child {
+    gap: 24px;
+  }
+  
+  nav > div:last-child .active {
+    position: relative;
+  }
+  
+  nav > div:last-child .active::after {
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    height: 3px;
+    border-radius: 99px;
+    background-color: #ecad29;
+  }
+  
+  .indicator {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    z-index: 60;
+    background-color: #ecad29;
+  }
+  
+  .pagination {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: inline-flex;
+  }
+  
+  .pagination > .arrow {
+    z-index: 60;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    border: 2px solid #ffffff55;
+    display: grid;
+    place-items: center;
+  }
+  
+  .pagination > .arrow:nth-child(2) {
+    margin-left: 20px;
+  }
+  
+  .pagination > .arrow svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    color: #ffffff99;
+  }
+  
+  .progress-sub-container {
+    margin-left: 24px;
+    z-index: 60;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .progress-sub-background {
+    width: 500px;
+    height: 3px;
+    background-color: #ffffff33;
+  }
+  
+  .progress-sub-foreground {
+    height: 3px;
+    background-color: #ecad29;
+  }
+  
+  .slide-numbers {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 60;
+    position: relative;
+  }
+  
+  .slide-numbers .item {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+  }
+  
+/*Section de contact*/
+
+.contacts {
+  background-color: #9e8989;
+  padding: 50px 0;
+  background: #8c5780;
+  background: linear-gradient(0deg, #0c2c34 0%, #8c5780 100%);
+  color: white; /* Texte en blanc pour contraster avec le fond */
+  font-family: Arial, sans-serif; /* Choix de la police */
+ 
+}
+
+.subscribe {
+  position: relative;
+  height: 240px;
+  width: 340px;
+  padding: 30px;
+  background-color: #FFF;
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+}
+
+.subscribe:after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  bottom: 18px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #1a044e;
+}
+
+
+.subscribe input, .subscribe textarea {
+  position: relative; /* Utilise relative pour éviter les superpositions */
+  bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  width: 82%;
+  background: transparent;
+  transition: all .25s ease;
+}
+
+.subscribe input:focus, .subscribe textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #0d095e;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+}
+
+
+.subscribe .submit-btn {
+  position: absolute;
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #0f0092;
+  color: #FFF;
+  padding: 12px 25px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  right: -10px;
+  bottom: -20px;
+  cursor: pointer;
+  transition: all .25s ease;
+  box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
+}
+
+.subscribe .submit-btn:hover {
+  background-color: #07013d;
+  box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+}
+
+/* Styles pour le message de confirmation */
+#confirmationMessage {
+  display: none;
+  padding: 20px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+#confirmationMessage.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Animation d'entrée*/
+
