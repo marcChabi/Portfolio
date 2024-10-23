@@ -1,8 +1,6 @@
-version: '3'
+version: '3.8'
 services:
   web:
-    build: .
+    image: mon-portfolio
     ports:
       - "80:80"
-    volumes:
-      - .:/var/www/html
