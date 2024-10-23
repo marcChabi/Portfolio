@@ -76,6 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="navigation">
                 <a href="#" class="nav-link active">Accueil</a>
+                <a href="./php/projets.php" class="nav-link active">Mes projets</a>
+                <a href="#aPropos" class="nav-link">A propos</a>
                 <a href="#contactSec" class="nav-link">Contact</a>
             </div>
 
