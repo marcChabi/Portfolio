@@ -48,4 +48,4 @@ jobs:
         app-name: 'monPortfolio'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_81aba38d2e1742e7bfb34e2cd30d03ac }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_efee62e675d14f18891981f8d211c4a4 }}/nmcaz/mon-portfolio:${{ github.sha }}'
+        images: 'nmcaz/mon-portfolio:${{ github.sha }}'
