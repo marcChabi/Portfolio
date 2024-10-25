@@ -807,5 +807,14 @@ footer {
   display: none;
 }
 
-/*Animation d'entrée*/
+/*Correction du problème de défilement */
+
+.card {
+  position: relative; /* Change à relative si nécessaire */
+}
+/*Permet d'imposer que tout les éléments soient dans le body*/
+html, body {
+  overflow-x: hidden; /* Désactive le défilement horizontal */
+}
+
 
