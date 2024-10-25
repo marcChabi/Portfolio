@@ -54,23 +54,9 @@ window.addEventListener('click', function (event) {
     }
 });
 
-//pour faire partir la nav quand on scroll
-/*
-let lastScrollTop = 0;
-const nav = document.querySelector('nav'); // Sélectionne la barre de navigation
 
-window.addEventListener('scroll', function() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (scrollTop > lastScrollTop) {
-    // Scroll vers le bas -> cacher la nav
-    nav.style.top = "-80px"; // Ajuste la valeur en fonction de la hauteur de ta nav
-  } else {
-    // Scroll vers le haut -> afficher la nav
-    nav.style.top = "0";
-  }
+document.getElementById("cvButton").addEventListener("click", function() {
+    window.open("cv_marc_chabi.pdf", "_blank");
+  });
   
-  lastScrollTop = scrollTop;
-});
-*/
 

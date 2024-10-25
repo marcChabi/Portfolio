@@ -75,9 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
             <div class="navigation">
-                <a href="#" class="nav-link active">Accueil</a>
+                <a href="#presentation" class="nav-link active">Accueil</a>
                
-                <a href="#aPropos" class="nav-link">A propos</a>
+                <a href="#aPropos" class="nav-link">À propos</a>
                 <a href="#contactSec" class="nav-link">Contact</a>
             </div>
 
@@ -90,14 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 <span id="close-modal" class="close-btn">&times;</span>
                 </div>
                
-                <a href="#" class="nav-link">Accueil</a>
+                <a href="#presentation" class="nav-link">Accueil</a>
               
-                <a href="#aPropos" class="nav-link">A propos</a>
+                <a href="#aPropos" class="nav-link">À propos</a>
                 <a href="#contactSec" class="nav-link">Contact</a>
             </div>
         </div>
 
-    <section class="projects py-5">
+    <section id="presentation" class="projects py-5">
         
 
         <header class="text-center py-5">
@@ -115,21 +115,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="spicy-rice-regular">Marc NAHUM CHABI</p>
                     <p class="spicy-rice-regular" id="typing-effect">Expert en développement web, logiciel et applications mobiles</p>
                     <div class="btn-container py-5">
+                    <a href="https://github.com/marcChabi" target="_blank">
                         <button class="btn-github">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
                                 <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.17c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.083-.729.083-.729 1.205.085 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.398 3.005-.403 1.022.005 2.048.137 3.006.403 2.29-1.553 3.297-1.23 3.297-1.23.655 1.653.242 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.803 5.623-5.475 5.92.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.824.576 4.765-1.587 8.199-6.084 8.199-11.385 0-6.627-5.373-12-12-12z"/>
                             </svg>
                         </button>
+                    </a>
 
+                    <a href="https://www.linkedin.com/in/marc-nahum-chabi/" target="_blank">
                         <button class="btn-linkedin">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#0077b5">
                                 <path d="M22.23 0H1.77C.79 0 0 .78 0 1.75v20.5C0 23.22.79 24 1.77 24h20.5c.98 0 1.77-.78 1.77-1.75V1.75C24 .78 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.68c-1.14 0-2.06-.93-2.06-2.06 0-1.14.92-2.06 2.06-2.06s2.06.92 2.06 2.06c0 1.13-.92 2.06-2.06 2.06zm15.11 12.77h-3.56v-5.6c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.69H9.46V9h3.42v1.56h.05c.48-.91 1.65-1.85 3.4-1.85 3.63 0 4.3 2.39 4.3 5.49v6.25z"/>
                             </svg>
                         </button>
+                    </a>
                         
                     </div>
                     
-                    <button class="btn">Mon cv</button>
+                    <button class="btn" id="cvButton">Mon CV</button>
                 </div>
 
                 <div class="col-md-4">
