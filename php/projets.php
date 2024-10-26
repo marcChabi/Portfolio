@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 
     <!-- Mon fichier CSS personnalisé pour ajouter mes propres styles -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/stylesProj.css">
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
@@ -20,8 +20,8 @@
 </head>
 <body>       
 
-    <section class="projects py-5">
-        <nav>
+    <section class="blur-background">
+        <nav id="navbar">
             <div>
                 <div class="svg-container">
                 <svg
@@ -73,28 +73,27 @@
         </div>
 
         <div id="demo"></div>
+        
 
         <div class="details" id="details-even">
             <div class="place-box">
-                <div class="text">Switzerland Alps</div>
+                <div class="text">Développement logiciel JAVA</div>
             </div>
-            <div class="title-box-1"><div class="title-1">SAINT</div></div>
-            <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
+            <div class="title-box-1"><div class="title-1">JAVA</div></div>
+            <div class="title-box-2"><div class="title-2">ECLIPSE</div></div>
             <div class="desc">
-                Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
-            </div>
+            Une application logicielle développée en Java avec Eclipse, axée sur la création de solutions logicielles efficaces et évolutives pour divers besoins des utilisateurs            </div>
 
         </div>
 
         <div class="details" id="details-odd">
             <div class="place-box">
-                <div class="text">Switzerland Alps</div>
+                <div class="text">Développement logiciel JAVA</div>
             </div>
-            <div class="title-box-1"><div class="title-1">SAINT </div></div>
-            <div class="title-box-2"><div class="title-2">ANTONIEN</div></div>
+            <div class="title-box-1"><div class="title-1">JAVA</div></div>
+            <div class="title-box-2"><div class="title-2">ECLIPSE</div></div>
             <div class="desc">
-                Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It's a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.
-            </div>
+            Une application logicielle développée en Java avec Eclipse, axée sur la création de solutions logicielles efficaces et évolutives pour divers besoins des utilisateurs            </div>
      
         </div>
 
@@ -111,23 +110,8 @@
         <div class="cover" ></div>
 
     </section>
-
-
-    <section class="projects py-5">
-
-       
-    </section>
-
     
     <script src="../js/scriptTemp.js"></script>
     <script src="../js/script.js"></script>
-
-
-    <footer class="text-center py-4">
-        <p>&copy; 2024 Marc Nahum CHABI. Tous droits réservés.</p>
-    </footer>
-
-
-    
 </body>
 </html>

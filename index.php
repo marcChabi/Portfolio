@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="navigation">
                 <a href="#presentation" class="nav-link active">Accueil</a>
-               
+                <a href="./php/projets.php" class="nav-link">Mes projets</a>
                 <a href="#aPropos" class="nav-link">À propos</a>
                 <a href="#contactSec" class="nav-link">Contact</a>
             </div>
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                
                 <a href="#presentation" class="nav-link">Accueil</a>
-              
+                <a href="./php/projets.php" class="nav-link">Mes projets</a>
                 <a href="#aPropos" class="nav-link">À propos</a>
                 <a href="#contactSec" class="nav-link">Contact</a>
             </div>

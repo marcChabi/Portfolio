@@ -1,50 +1,37 @@
 const data = [
-    {
-        place:'Switzerland Alps',
-        title:'SAINT',
-        title2:'ANTONIEN',
-        description:'Tucked away in the Switzerland Alps, Saint Antönien offers an idyllic retreat for those seeking tranquility and adventure alike. It\'s a hidden gem for backcountry skiing in winter and boasts lush trails for hiking and mountain biking during the warmer months.',
-        image:'https://assets.codepen.io/3685267/timed-cards-1.jpg'
-    },
-    {
-        place:'Japan Alps',
-        title:'NANGANO',
-        title2:'PREFECTURE',
-        description:'Nagano Prefecture, set within the majestic Japan Alps, is a cultural treasure trove with its historic shrines and temples, particularly the famous Zenkō-ji. The region is also a hotspot for skiing and snowboarding, offering some of the country\'s best powder.',
-        image:'https://assets.codepen.io/3685267/timed-cards-2.jpg'
-    },
-    {
-        place:'Sahara Desert - Morocco',
-        title:'MARRAKECH',
-        title2:'MEROUGA',
-        description:'The journey from the vibrant souks and palaces of Marrakech to the tranquil, starlit sands of Merzouga showcases the diverse splendor of Morocco. Camel treks and desert camps offer an unforgettable immersion into the nomadic way of life.',
-        image:'https://assets.codepen.io/3685267/timed-cards-3.jpg'
-    },
-    {
-        place:'Sierra Nevada - USA',
-        title:'YOSEMITE',
-        title2:'NATIONAL PARAK',
-        description:'Yosemite National Park is a showcase of the American wilderness, revered for its towering granite monoliths, ancient giant sequoias, and thundering waterfalls. The park offers year-round recreational activities, from rock climbing to serene valley walks.',
-        image:'https://assets.codepen.io/3685267/timed-cards-4.jpg'
-    },
-    {
-        place:'Tarifa - Spain',
-        title:'LOS LANCES',
-        title2:'BEACH',
-        description:'Los Lances Beach in Tarifa is a coastal paradise known for its consistent winds, making it a world-renowned spot for kitesurfing and windsurfing. The beach\'s long, sandy shores provide ample space for relaxation and sunbathing, with a vibrant atmosphere of beach bars and cafes.',
-        image:'https://assets.codepen.io/3685267/timed-cards-5.jpg'
-    },
-    {
-        place:'Cappadocia - Turkey',
-        title:'Göreme',
-        title2:'Valley',
-        description:'Göreme Valley in Cappadocia is a historical marvel set against a unique geological backdrop, where centuries of wind and water have sculpted the landscape into whimsical formations. The valley is also famous for its open-air museums, underground cities, and the enchanting experience of hot air ballooning.',
-        image:'https://assets.codepen.io/3685267/timed-cards-6.jpg'
-    },
-]
+  {
+      place: 'Développement de Jeux de Table',
+      title: 'JEU DE TABLE',
+      title2: 'EN LIGNE',
+      description: 'Un jeu de table en ligne développé en HTML5 et CSS3 sur VS Code, intégrant PHP pour la fonctionnalité côté serveur. Ce projet vise à offrir une expérience de jeu interactive et engageante.',
+      image: '../ImageProjets/Siteweb3.png' // Remplacez par l'URL de l'image de votre projet
+  },
+  {
+      place: 'Développement de Logiciel',
+      title: 'APPLICATION',
+      title2: 'JAVA',
+      description: 'Une application logicielle développée en Java avec Eclipse, axée sur la création de solutions logicielles efficaces et évolutives pour divers besoins des utilisateurs.',
+      image: '../ImageProjets/Java1.png' // Remplacez par l'URL de l'image de votre projet
+  },
+  {
+      place: 'Application Web avec OpenStreetMap',
+      title: 'SIMULATION',
+      title2: 'DE CARTE',
+      description: 'Une application web qui simule la chasse en utilisant le suivi de souris, construite avec Jakarta EE en utilisant JSP et Servlets, et JavaScript sur Tomcat dans Eclipse, intégrant OpenStreetMap pour des services de localisation améliorés.',
+      image: '../ImageProjets/JavaEE2.png' // Remplacez par l'URL de l'image de votre projet
+  },
+  {
+      place: 'Simulation de Chasse au Bouton',
+      title: 'APPLICATION',
+      title2: 'IONIC',
+      description: 'Une application web interactive conçue pour simuler la chasse d\'un bouton par la souris, développée avec Ionic en utilisant Angular et TypeScript, avec un backend utilisant Node.js, Express et MongoDB.',
+      image: '../ImageProjets/Siteweb1.png' // Remplacez par l'URL de l'image de votre projet
+  }
+];
+
 
 const _ = (id)=>document.getElementById(id)
-const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
+const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image});" ></div>`).join('')
 
 
 
@@ -58,8 +45,8 @@ const cardContents = data.map((i, index)=>`<div class="card-content" id="card-co
 
 
 const sildeNumbers = data.map((_, index)=>`<div class="item" id="slide-item-${index}" >${index+1}</div>`).join('')
-_('demo').innerHTML =  cards + cardContents
-_('slide-numbers').innerHTML =  sildeNumbers
+_('demo').innerHTML = cards + cardContents
+_('slide-numbers').innerHTML = sildeNumbers
 
 
 const range = (n) =>
@@ -88,12 +75,12 @@ function animate(target, duration, properties) {
   });
 }
 
-let order = [0, 1, 2, 3, 4, 5];
+let order = [0, 1, 2, 3];
 let detailsEven = true;
 
 let offsetTop = 200;
 let offsetLeft = 700;
-let cardWidth = 200;
+let cardWidth = 250;
 let cardHeight = 300;
 let gap = 40;
 let numberSize = 50;
@@ -268,6 +255,7 @@ function step() {
       width: window.innerWidth,
       height: window.innerHeight,
       borderRadius: 0,
+      filter: 'blur(10px)',
       onComplete: () => {
         const xNew = offsetLeft + (rest.length - 1) * (cardWidth + gap);
         gsap.set(getCard(prv), {
@@ -275,6 +263,7 @@ function step() {
           y: offsetTop,
           width: cardWidth,
           height: cardHeight,
+          filter: 'blur(0px)',
           zIndex: 30,
           borderRadius: 10,
           scale: 1,

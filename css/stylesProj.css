@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Pirata+One&family=Sixtyfour+Convergence&display=swap');
+
+.cinzel-font {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+  }
+  .pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 900px;
+    font-style: normal;
+  }
+  
+.spicy-rice-regular {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.center-Thing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+    color: white; /* Texte en blanc pour contraster avec le fond */
+    font-family: Arial, sans-serif; /* Choix de la police */
+}
+.blur-background {
+  background: rgba(255, 255, 255, 0.8); /* Couleur de fond avec transparence */
+  backdrop-filter: blur(10px); /* Applique un flou en arrière-plan */
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  display: flex; /* Flex pour centrer le contenu si nécessaire */
+  flex-direction: column; /* Aligne le contenu verticalement */
+  align-items: center; /* Centre horizontalement */
+  justify-content: center; /* Centre verticalement */
+}
+
+.nav-link {
+    text-decoration: none;       /* Retire le soulignement */
+    color: #e6d9d9;                 /* Couleur du texte */
+    font-weight: bold;           /* Texte en gras */
+    padding: 10px 15px;         /* Espacement autour du texte */
+    border-radius: 3px;         /* Coins arrondis des liens */
+    transition: background-color 0.3s ease; /* Animation lors du hover */
+}
+.nav-link:hover {
+    background-color: #e0e0e0;  /* Couleur de fond lors du hover */
+}
+
+/*exercice */
+.label-check {
+    display: none;
+  }
+  
+  .hamburger-label {
+    width: 40px;
+    height: 30px;
+    display: none;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .hamburger-label div {
+    width: 100%;
+    height: 4px;
+    background-color: #f5eded;
+    position: absolute;
+    transition: all 0.3s;
+  }
+  
+  .line1 {
+    top: 0;
+  }
+  
+  .line2 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .line3 {
+    bottom: 0;
+  }
+  
+  #label-check:checked + .hamburger-label .line1 {
+    transform: rotate(45deg) translateY(8px);
+  }
+  
+  #label-check:checked + .hamburger-label .line2 {
+    opacity: 0;
+  }
+  
+  #label-check:checked + .hamburger-label .line3 {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(196, 188, 188, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .modal a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+  }
+  
+  .modal a:hover {
+    background-color: #5c4040;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Hide hamburger on larger screens */
+  @media (max-width: 768px) {
+    .hamburger-label {
+        display: block;
+    }
+  
+    .navigation {
+        display: none;
+    }
+  }
+
+
+/* Styles pour les sections de projets */
+
+
+.card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px; /* Ajuste la largeur ici */
+    height: 400px; /* Ajuste la hauteur ici */
+    background-position: center;
+    background-size: cover;
+    box-shadow: 6px 6px 10px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  #btn {
+    position: absolute;
+    top: 690px;
+    left: 16px;
+    z-index: 99;
+  }
+  
+  .card-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba(255, 255, 255, 0.87);
+    padding-left: 16px;
+  }
+  
+  .content-place {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .content-title-1,
+  .content-title-2 {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .content-start {
+    width: 30px;
+    height: 5px;
+    border-radius: 99px;
+    background-color: rgba(255, 255, 255, 0.87);
+  }
+  
+  .details {
+    z-index: 22;
+    position: absolute;
+    top: 240px;
+    left: 60px;
+    border-radius: 15px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    color: #ffffff; /* Couleur du texte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide pour l'ombre */
+    backdrop-filter: blur(80px); /* Flou de l'arrière-plan */
+    background-color: rgba(12, 44, 52, 0.5); /* Couleur de fond avec opacité pour le flou */
+ 
+}
+
+.details:hover {
+    transform: scale(1.05); /* Agrandissement au survol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée au survol */
+}
+
+
+  
+  .place-box {
+    height: 46px;
+    overflow: hidden;
+  }
+  
+  .text {
+    padding-top: 16px;
+    font-size: 20px;
+    position: relative;
+  }
+  
+  .text::before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 4px;
+    border-radius: 99px;
+    background-color: white;
+  }
+  
+  .title-1,
+  .title-2 {
+    font-weight: 600;
+    font-size: 62px;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .title-box-1,
+  .title-box-2 {
+    margin-top: 2px;
+    height: 100px;
+    overflow: hidden;
+  }
+  
+  .desc {
+    margin-top: 16px;
+    width: 500px;
+  }
+  
+  .cta {
+    width: 500px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .discover {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    height: 36px;
+    border-radius: 99px;
+    color: #ffffff;
+    padding: 4px 24px;
+    font-size: 12px;
+    margin-left: 16px;
+    text-transform: uppercase;
+  }
+  
+  nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 36px;
+    font-weight: 500;
+    transition: top 0.3s;
+  }
+  
+  nav svg,
+  nav .svg-container {
+    width: 20px;
+    height: 20px;
+  }
+  
+  nav > div {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  nav > div:first-child {
+    gap: 10px;
+  }
+  
+  nav > div:last-child {
+    gap: 24px;
+  }
+  
+  nav > div:last-child .active {
+    position: relative;
+  }
+  
+  nav > div:last-child .active::after {
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    height: 3px;
+    border-radius: 99px;
+    background-color: #ecad29;
+  }
+  
+  .indicator {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    z-index: 60;
+    background-color: #ecad29;
+  }
+  
+  .pagination {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: inline-flex;
+  }
+  
+  .pagination > .arrow {
+    z-index: 60;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    border: 2px solid #ffffff55;
+    display: grid;
+    place-items: center;
+  }
+  
+  .pagination > .arrow:nth-child(2) {
+    margin-left: 20px;
+  }
+  
+  .pagination > .arrow svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    color: #ffffff99;
+  }
+  
+  .progress-sub-container {
+    margin-left: 24px;
+    z-index: 60;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .progress-sub-background {
+    width: 500px;
+    height: 3px;
+    background-color: #ffffff33;
+  }
+  
+  .progress-sub-foreground {
+    height: 3px;
+    background-color: #ecad29;
+  }
+  
+  .slide-numbers {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 60;
+    position: relative;
+  }
+  
+  .slide-numbers .item {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(80px); /* Flou de l'arrière-plan */
+    background-color: rgba(12, 44, 52, 0.5); /* Couleur de fond avec opacité pour le flou */
+    z-index: 1; /* Au-dessus de l'arrière-plan mais en dessous du contenu */
+  }
+
+  html, body {
+    overflow-x: hidden; /* Désactive le défilement horizontal */
+    
+    
+  }
+  
