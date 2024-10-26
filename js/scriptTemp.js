@@ -18,14 +18,14 @@ const data = [
       title: 'SIMULATION',
       title2: 'DE CARTE',
       description: 'Une application web qui simule la chasse en utilisant le suivi de souris, construite avec Jakarta EE en utilisant JSP et Servlets, et JavaScript sur Tomcat dans Eclipse, intégrant OpenStreetMap pour des services de localisation améliorés.',
-      image: '../ImageProjets/JavaEE2.png' // Remplacez par l'URL de l'image de votre projet
+      image: '../ImageProjets/JavaEE3.png' // Remplacez par l'URL de l'image de votre projet
   },
   {
       place: 'Simulation de Chasse au Bouton',
       title: 'APPLICATION',
       title2: 'IONIC',
       description: 'Une application web interactive conçue pour simuler la chasse d\'un bouton par la souris, développée avec Ionic en utilisant Angular et TypeScript, avec un backend utilisant Node.js, Express et MongoDB.',
-      image: '../ImageProjets/Siteweb1.png' // Remplacez par l'URL de l'image de votre projet
+      image: '../ImageProjets/NMC1.png' // Remplacez par l'URL de l'image de votre projet
   }
 ];
 
