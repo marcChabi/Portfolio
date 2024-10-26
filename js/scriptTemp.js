@@ -1,17 +1,17 @@
 const data = [
   {
+    place: 'Développement de Logiciel',
+    title: 'APPLICATION',
+    title2: 'JAVA',
+    description: 'Une application logicielle développée en Java avec Eclipse, axée sur la création de solutions logicielles efficaces et évolutives pour divers besoins des utilisateurs.',
+    image: '../ImageProjets/Java1.png' // Remplacez par l'URL de l'image de votre projet
+},
+  {
       place: 'Développement de Jeux de Table',
       title: 'JEU DE TABLE',
       title2: 'EN LIGNE',
       description: 'Un jeu de table en ligne développé en HTML5 et CSS3 sur VS Code, intégrant PHP pour la fonctionnalité côté serveur. Ce projet vise à offrir une expérience de jeu interactive et engageante.',
       image: '../ImageProjets/Siteweb3.png' // Remplacez par l'URL de l'image de votre projet
-  },
-  {
-      place: 'Développement de Logiciel',
-      title: 'APPLICATION',
-      title2: 'JAVA',
-      description: 'Une application logicielle développée en Java avec Eclipse, axée sur la création de solutions logicielles efficaces et évolutives pour divers besoins des utilisateurs.',
-      image: '../ImageProjets/Java1.png' // Remplacez par l'URL de l'image de votre projet
   },
   {
       place: 'Application Web avec OpenStreetMap',
