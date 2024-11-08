@@ -58,5 +58,6 @@ window.addEventListener('click', function (event) {
 document.getElementById("cvButton").addEventListener("click", function() {
     window.open("cv_marc_chabi.pdf", "_blank");
   });
-  
 
+
+  

@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <section id="presentation" class="projects py-5">
         
 
-        <header class="text-center py-5">
+        <header id="header-animated" class="text-center py-5">
             
             <h1 class="cinzel-font">Ingénieur des Services du Numérique en devenir</h1>
             
@@ -111,11 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="row">
                 <div class="col-md-8">
                 <!-- Méssage de bienvenue -->
-                    <h1 class="spicy-rice-regular">Je suis, </h1>
-                    <p class="spicy-rice-regular">Marc NAHUM CHABI</p>
+                    <h1 id="animated-h1" class="spicy-rice-regular">Je suis, </h1>
+                    <p id="animated-p" class="spicy-rice-regular">Marc NAHUM CHABI</p>
                     <p class="spicy-rice-regular" id="typing-effect">Expert en développement web, logiciel et applications mobiles</p>
                     <div class="btn-container py-5">
-                    <a href="https://github.com/marcChabi" target="_blank">
+                    <a  id="animated-p" href="https://github.com/marcChabi" target="_blank">
                         <button class="btn-github">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
                                 <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.17c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.083-.729.083-.729 1.205.085 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.47-2.38 1.236-3.22-.123-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.398 3.005-.403 1.022.005 2.048.137 3.006.403 2.29-1.553 3.297-1.23 3.297-1.23.655 1.653.242 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.803 5.623-5.475 5.92.43.372.823 1.102.823 2.222v3.293c0 .32.216.694.824.576 4.765-1.587 8.199-6.084 8.199-11.385 0-6.627-5.373-12-12-12z"/>
@@ -123,17 +123,42 @@ document.addEventListener("DOMContentLoaded", function () {
                         </button>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/marc-nahum-chabi/" target="_blank">
-                        <button class="btn-linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#0077b5">
-                                <path d="M22.23 0H1.77C.79 0 0 .78 0 1.75v20.5C0 23.22.79 24 1.77 24h20.5c.98 0 1.77-.78 1.77-1.75V1.75C24 .78 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.68c-1.14 0-2.06-.93-2.06-2.06 0-1.14.92-2.06 2.06-2.06s2.06.92 2.06 2.06c0 1.13-.92 2.06-2.06 2.06zm15.11 12.77h-3.56v-5.6c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.69H9.46V9h3.42v1.56h.05c.48-.91 1.65-1.85 3.4-1.85 3.63 0 4.3 2.39 4.3 5.49v6.25z"/>
+                    <!-- icon linedin -->
+                    <div id="animated-t" class="tooltip-container">
+                    <div class="tooltip">
+                        <div class="profile">
+
+                        <div class="user">
+                           
+                            <div class="name">Marc CHABI</div>
+
+                        </div>
+                        <div class="about">500+ Connections</div>
+                        </div>
+                    </div>
+                    <div class="text1">
+                        <a class="icon" href="https://www.linkedin.com/in/marc-nahum-chabi/">
+                        <div class="layer">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span class="fab fa-linkedin">
+                            <svg viewBox="0 0 448 512" height="1em">
+                                <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                                ></path>
                             </svg>
-                        </button>
-                    </a>
+                            </span>
+                        </div>
+                        <div class="text1">LinkedIn</div>
+                        </a>
+                    </div>
+                    </div>
+
                         
                     </div>
                     
-                    <button class="btn" id="cvButton">Mon CV</button>
                 </div>
 
                 <div class="col-md-4">
@@ -153,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </section>
     
     <section id="competences" class="text-center py-5">
-        <h2 class="spicy-rice-regular">Les technologies que j'utilise </h2>
+        <h2 class="animate-on-scroll spicy-rice-regular">Les technologies que j'utilise </h2>
         <div class="skills-container">
             <!-- Angular -->
             <div class="skill-1"> 
@@ -271,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
           
         </div>
 
-        <h2 class="spicy-rice-regular py-1">Les logiciels que j'utilise </h2>
+        <h2 class="spicy-rice-regular animate-on-scroll py-1">Les logiciels que j'utilise </h2>
         <div class="skills-container-2">
              <!-- Vscode -->
              <div class="skill-2-1">
@@ -310,68 +335,98 @@ document.addEventListener("DOMContentLoaded", function () {
 
         </div>
 
-        <h2 class="spicy-rice-regular py-1">Méthodologies de travail</h2>
+        <h2 class="animate-on-scroll spicy-rice-regular py-1">Méthodologies de travail</h2>
 
-            <div class="row">
-                <div class="col-md-4">
+        <div class="row animated-methodologies">
+            <div class="col-md-4">
                 <p class="spicy-rice-regular text-light">AGILE : SCRUM</p>
-                </div>
-                <div class="col-md-4">
-                <p class="spicy-rice-regular text-light">Cycle en V</p>
-                </div>
-                <div class="col-md-4">
-                <p class="spicy-rice-regular text-light">Méthode en cascade</p>
-                </div>
             </div>
-        
-
+            <div class="col-md-4">
+                <p class="spicy-rice-regular text-light">Cycle en V</p>
+            </div>
+            <div class="col-md-4">
+                <p class="spicy-rice-regular text-light">Méthode en cascade</p>
+            </div>
         </div>
+
     </section>
 
     <!-- Section pour le à propos de moi  -->
     <section id="aPropos" class="projects" class="text-center py-5">
 
-        <div class="center-Thing row"><h1 class="spicy-rice-regular">Qui suis-je ?</h1></div>
+        <div id="animated-p" class="center-Thing row"><h1 class="spicy-rice-regular">Qui suis-je ?</h1></div>
         
         <div class="row">
             <div class="center-Thing col-md-4">
                 <!-- Ma photo de présentation -->
-                <div id="photo-container">
-                        <img id="my-photo" src="./img/2.png" alt="Ma photo">
-                        <div id="magic-animation"></div> <!-- Conteneur pour l'animation -->
-                    </div>
+                 <div class="row">
+                    <div id="photo-container">
+                            <img id="my-photo" src="./img/2.png" alt="Ma photo">
+                            <div id="magic-animation"></div> <!-- Conteneur pour l'animation -->
+                    </div>  
+                 </div>
+                
+
             </div>
-            <div class="col-md-8">
-                <p class="text-present">👋 Bonjour ! Je suis Marc Nahum CHABI, étudiant en cinquième année du cycle ingénieur à l'ESIGELEC, spécialisé en ingénierie des services du numérique. Depuis toujours, le numérique est ma passion, et je m'efforce de transformer cette passion en compétences concrètes et en projets ambitieux.
+            <div id="animated-p" class="col-md-8">
+                <p id="animated-t" class="text-present">👋 Bonjour ! Je suis Marc Nahum CHABI, étudiant en cinquième année du cycle ingénieur à l'ESIGELEC, spécialisé en ingénierie des services du numérique. Depuis toujours, le numérique est ma passion, et je m'efforce de transformer cette passion en compétences concrètes et en projets ambitieux.
                     <br> À travers mes études, j’ai développé un solide bagage en programmation, développement de solutions digitales, et intégration des technologies innovantes.
 
-                    <br>En dehors des cours, j’adore explorer le monde des objets connectés et imaginer comment ils peuvent simplifier notre quotidien. Mon intérêt ne s'arrête pas là : j'ai aussi un faible pour le vintage, que ce soit dans le style, la technologie ou l’art. Le dessin est une autre de mes grandes passions ; vous pouvez d'ailleurs retrouver mes créations sur mon site <a href="https://nmcart.fr" target="_blank" class="text-link">nmcart.fr</a>, où je partage mon univers graphique.
+                    <br>En dehors des cours, j’adore explorer le monde des objets connectés et imaginer comment ils peuvent simplifier notre quotidien. Mon intérêt ne s'arrête pas là : j'ai aussi un faible pour le vintage, que ce soit dans le style, la technologie ou l’art. Le dessin est une autre de mes grandes passions, et vous pouvez <a href="https://drive.google.com/drive/folders/10oOo82liJU-Oza3cEvzqC9rcowc06yLc?usp=drive_link" target="_blank" style="text-decoration: none; color: #007bff;">découvrir mes dessins ici</a>.
 
                     <br>Curieux, créatif et toujours prêt à relever de nouveaux défis, je m’efforce d'apprendre et d'innover continuellement. 
                     <br>Mon objectif ? Créer un pont entre le numérique et l'humain, en concevant des solutions qui améliorent la vie quotidienne, tout en y apportant une touche d'authenticité et de style rétro.</p>
             </div>
+
+           
+
+        </div>
+        <div class="row">
+            <div id="animated-p" class=" center-Thing col-md-4">
+               <button class="btn" id="cvButton">Mon CV</button>
+            </div>
+            <div class="col-md-8"></div>
         </div>
     </section>
 
     <!-- Section pour le formulaire de contact  -->
      <section id="contactSec" class="contacts py-5">
         <div class="row center-Thing">
-             <h1 class="spicy-rice-regular">Besoin de plus d'informations ? Contactez-moi dès maintenant !</h1>
+             <h1 id="animated-p" class="spicy-rice-regular">Besoin de plus d'informations ? Contactez-moi dès maintenant !</h1>
         </div>
-        <div class="row center-Thing py-5">
-        
-            <form action="./php/traitementMail.php" method="POST" class="subscribe">
-                <input placeholder="Votre e-mail" class="subscribe-input" name="email" type="email" required>
-                <br>
-                <textarea placeholder="Votre message" class="subscribe-input" name="message" rows="4" required></textarea>
-                <br>
 
-                <button type="submit" class="submit-btn">Envoyer</button>
-            </form>
-                        <!-- Message de confirmation -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="item-hints">
+                <div class="hint" data-position="4">
+                    <span class="hint-radius"></span>
+                    <span class="hint-dot">🔔</span>
+                    <div class="hint-content do--split-children">
+                        <p class="spicy-rice-regular">Je reviendrai vers vous dès que possible pour répondre à votre demande.</p>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+             <div class="row center-Thing py-5">
+                
+                    <form action="./php/traitementMail.php" method="POST" class="subscribe">
+                        <input placeholder="Votre e-mail" class="subscribe-input" name="email" type="email" required>
+                        <br>
+                        <textarea placeholder="Votre message" class="subscribe-input" name="message" rows="4" required></textarea>
+                        <br>
+
+                        <button type="submit" class="submit-btn">Envoyer</button>
+                    </form>
+                        
+             </div>
+            </div>
+        </div>
+
             
 
-        </div>
+      
         <div class="row center-Thing">
             <div id="confirmationMessage" class="hidden">
                 <p class="spicy-rice-regular">Votre message a été envoyé avec succès !</p>
@@ -384,6 +439,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     <script src="./js/script.js"></script>
+
 
 
     <footer class="text-center py-4">

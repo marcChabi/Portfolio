@@ -233,21 +233,9 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 50%; /* Pour un effet circulaire */
-    animation: spin 5s linear infinite; /* Animation de rotation */
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); /* Ombre lumineuse */
-    opacity: 0.9; /* Légère transparence */
 }
 
-/* Animation de rotation */
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 
 /* Styles pour contenaire des buttons*/
 
@@ -319,43 +307,6 @@ footer {
 .btn-github:hover svg {
     transform: scale(0.9);
     fill: #333333;
-}
-
-/* Styles pour les liens LinkedIn */
-.btn-linkedin {
-    display: grid;
-    place-items: center;
-    background: #e3edf7;
-    width: 60px; /* Assure que la largeur et la hauteur sont égales */
-    height: 60px;
-    border-radius: 10px; /* Angle arrondi pour un bouton carré */
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0);
-    cursor: pointer;
-    transition: transform 0.5s;
-}
-
-.btn-linkedin:hover {
-    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
-                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    transform: translateY(0.5em);
-}
-
-.btn-linkedin svg {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.5s;
-    fill: #0077b5;
-}
-
-.btn-linkedin:hover svg {
-    transform: scale(0.9);
-    fill: #005582;
 }
 
 
@@ -817,4 +768,437 @@ html, body {
   overflow-x: hidden; /* Désactive le défilement horizontal */
 }
 
+
+/*LINKEDIN*/
+/* From Uiverse.io by vikas7754 */ 
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.profile {
+  background: #2a2b2f;
+  border-radius: 10px 15px;
+  padding: 10px;
+  border: 1px solid rgba(11, 63, 95, 1);
+}
+
+.tooltip-container:hover .tooltip {
+  top: -150px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+.layer {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+}
+.icon:hover .layer {
+  transform: rotate(-35deg) skew(20deg);
+}
+.layer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.layer span,
+.text1 {
+  color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.icon:hover.layer span {
+  box-shadow: -1px 1px 3px #1da1f2;
+}
+.icon .text1 {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  font-weight: 500;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.icon:hover .text1 {
+  bottom: -35px;
+  opacity: 1;
+}
+
+.icon:hover .layer span:nth-child(1) {
+  opacity: 0.2;
+}
+.icon:hover .layer span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+.icon:hover .layer span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+.icon:hover .layer span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+.icon:hover .layer span:nth-child(5) {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+.layer span.fab {
+  font-size: 30px;
+  line-height: 64px;
+  text-align: center;
+  padding-top: 10px;
+  fill: #1da1f2;
+  background: #000;
+}
+.user {
+  display: flex;
+  gap: 10px;
+}
+.img {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  border: 1px solid #1da1f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1da1f2;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #fff;
+}
+.about {
+  color: #ccc;
+  padding-top: 5px;
+}
+
+
+/* From Uiverse.io by vnuny */ 
+.item-hints {
+  --purple: #720c8f;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 170px;
+}
+.item-hints .hint {
+  margin: 150px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-hints .hint-dot {
+  z-index: 3;
+  border: 1px solid #ffe4e4;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-transform: translate(-0%, -0%) scale(0.95);
+  transform: translate(-0%, -0%) scale(0.95);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.item-hints .hint-radius {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -125px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.item-hints .hint[data-position="1"] .hint-content {
+  top: 85px;
+  left: 50%;
+  margin-left: 56px;
+}
+.item-hints .hint-content {
+  width: 300px;
+  position: absolute;
+  z-index: 5;
+  padding: 35px 0;
+  opacity: 0;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  color: #fff;
+  visibility: hidden;
+  pointer-events: none;
+}
+.item-hints .hint:hover .hint-content {
+  position: absolute;
+  z-index: 5;
+  padding: 35px 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.7s ease, visibility 0.7s ease;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  color: #fff;
+  visibility: visible;
+  pointer-events: none;
+}
+.item-hints .hint-content::before {
+  width: 0px;
+  bottom: 29px;
+  left: 0;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  position: absolute;
+  transition: width 0.4s;
+}
+.item-hints .hint:hover .hint-content::before {
+  width: 180px;
+  transition: width 0.4s;
+}
+.item-hints .hint-content::after {
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+  bottom: 29px;
+  left: 0;
+  width: 80px;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.item-hints .hint:hover .hint-content::after {
+  opacity: 1;
+  visibility: visible;
+}
+.item-hints .hint[data-position="4"] .hint-content {
+  bottom: 85px;
+  left: 50%;
+  margin-left: 56px;
+}
+
+
+/*Les animations css*/
+
+/* Animation Keyframes */
+@keyframes fadeInZoom {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Style pour l'animation du header */
+#header-animated {
+  animation: fadeInZoom 1.5s ease-out forwards; /* durée et type de transition */
+  opacity: 0; /* Pour assurer l'animation de l'opacité */
+}
+
+
+ /* Keyframes for slide-in and fade-in effect */
+ @keyframes slideInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+/* Style for h1 animation */
+#animated-h1 {
+  animation: slideInLeft 1.2s ease-out forwards;
+  opacity: 0; /* Start hidden for animation effect */
+}
+
+/* Style for p animation */
+#animated-p {
+  animation: fadeInBottom 1.5s ease-out forwards;
+  opacity: 0; /* Start hidden for animation effect */
+}
+#animated-t {
+  animation: fadeInTop 1.5s ease-out forwards;
+  opacity: 0; /* Start hidden for animation effect */
+}
+
+@keyframes zoomInFade {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Style pour l'animation de la photo */
+#photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#my-photo {
+  animation: zoomInFade 1.5s ease-out forwards;
+  opacity: 0; /* Commence masqué pour l'animation */
+  border-radius: 10px; /* Coins arrondis pour un effet élégant (facultatif) */
+}
+
+/* Animation de fond optionnelle */
+#magic-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15), transparent);
+  animation: zoomInFade 1.8s ease-out forwards;
+  opacity: 0; /* Commence masqué pour l'animation */
+  border-radius: 50%; /* Pour un effet circulaire */
+  animation: spin 5s linear infinite; /* Animation de rotation */
+  box-shadow: 0 0 20px rgba(29, 193, 211, 0.7); /* Ombre lumineuse */
+  opacity: 1.9; /* Légère transparence */
+}
+/* Animation de rotation */
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+/* Animation constante pour toute la section */
+@keyframes slideUpGlow {
+  0% {
+      transform: translateY(20px);
+      opacity: 0.5;
+      box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+  }
+  50% {
+      transform: translateY(-10px);
+      opacity: 1;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.8);
+  }
+  100% {
+      transform: translateY(20px);
+      opacity: 0.5;
+      box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+  }
+}
+
+/* Style pour l'animation de la section méthodologies */
+.animated-methodologies {
+  animation: slideUpGlow 3s ease-in-out infinite;
+  padding: 20px;
+}
+
+/* Animation spécifique aux éléments (les textes des méthodes) */
+.animated-methodologies .col-md-4 p {
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 0.5s; /* Décalage pour un effet de séquencement */
+}
+
+@keyframes fadeInUp {
+  0% {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Animation pour le titre */
+h2.animate-on-scroll {
+  animation: slideUpGlow 3s ease-in-out infinite;
+  text-shadow: 2px 2px 5px rgba(0, 204, 255, 0.8);
+}
 
